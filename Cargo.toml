@@ -11,8 +11,11 @@ readme = "README.md"
 
 [dependencies]
 antidote = "1.0"
-native-tls = "0.1"
+native-tls = { git = "https://github.com/segfault87/rust-native-tls.git", default-features = false, features = ["force_openssl"] }
 hyper = "0.10"
+
+[features]
+force_openssl = []
 
 [dev-dependencies]
 openssl = "0.9"
